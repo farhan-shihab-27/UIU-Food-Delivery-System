@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Runner Portal — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!--  RUNNER SIDEBAR  -->
+    <aside class="sidebar">
+
+      <!-- Logo -->
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" />
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">UIU Runner Portal</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+
+        <a href="runner-dashboard.html" class="sidebar-nav-item active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2" />
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+          Available Jobs
+        </a>
+
+        <a href="runner-deliveries.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>
+          My Deliveries
+        </a>
+
+        <a href="chat.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Messages
+        </a>
+
+        <a href="runner-earnings.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+          </svg>
+          Earnings
+        </a>
+
+        <a href="profile.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Profile
+        </a>
+
+      </nav>
+
+      <!-- Runner User Footer -->
+      <div class="sidebar-user">
+        <img
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop&face=center"
+          alt="Rafiq Ahmed" class="sidebar-user-avatar" />
+        <div class="sidebar-user-info">
+          <p class="sidebar-user-name">Rafiq Ahmed</p>
+          <p class="sidebar-user-role">Runner Account</p>
+          <a href="login.html" class="sidebar-logout">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            Log out
+          </a>
+        </div>
+      </div>
+
+    </aside>
+
+    <!--  MAIN CONTENT  -->
+    <main class="main-content">
+
+      <!-- Topbar -->
+      <div class="runner-topbar">
+        <div style="display:flex; align-items:center; gap: var(--space-5);">
+          <a href="student-dashboard.html" class="pub-navbar-back">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            Back
+          </a>
+          <h1 class="runner-topbar-title">Runner Dashboard</h1>
+        </div>
+        <div class="runner-status-pill">
+          <span class="runner-status-pill-dot"></span>
+          ONLINE &amp; ACTIVE
+        </div>
+      </div>
+
+      <!-- Page Body -->
+      <div style="padding: var(--space-6) var(--space-8) 0;">
+
+        <!-- Stats Row -->
+        <div class="runner-stats-row">
+
+          <div class="runner-stat-card">
+            <p class="runner-stat-label">Today's Earnings</p>
+            <p class="runner-stat-value earnings">$45.50</p>
+          </div>
+
+          <div class="runner-stat-card">
+            <p class="runner-stat-label">Deliveries Completed</p>
+            <p class="runner-stat-value">8</p>
+          </div>
+
+          <div class="runner-stat-card">
+            <p class="runner-stat-label">Your Rating</p>
+            <div class="runner-stat-value runner-stat-rating">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              4.9
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Two-Column Body -->
+      <div class="runner-body">
+
+        <!-- LEFT: Available Deliveries -->
+        <div>
+          <h2 class="runner-section-title">Available Deliveries</h2>
+
+          <!-- Job 1: UIU Cafeteria Express -->
+          <div class="delivery-job-card">
+            <div class="delivery-job-header">
+              <span class="delivery-job-name">UIU Cafeteria Express</span>
+              <span class="delivery-job-earn">+$3.50</span>
+            </div>
+
+            <div class="delivery-job-route">
+              <div class="delivery-route-row">
+                <span class="delivery-dot-pickup"></span>
+                Pickup: Cafeteria (Building 1)
+              </div>
+              <div class="delivery-route-row">
+                <span class="delivery-dot-drop"></span>
+                Drop: Building 4, Room 102 (Siam Al-Amin)
+              </div>
+            </div>
+
+            <div class="delivery-job-footer">
+              <span class="delivery-distance">Distance: 0.8 km</span>
+              <div class="delivery-job-actions">
+                <a href="runner-dashboard.html" class="job-btn-decline">Decline</a>
+                <a href="track-order.html" class="job-btn-accept">Accept</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 2: Kazi's Pizza Hub -->
+          <div class="delivery-job-card">
+            <div class="delivery-job-header">
+              <span class="delivery-job-name">Kazi's Pizza Hub</span>
+              <span class="delivery-job-earn">+$4.20</span>
+            </div>
+
+            <div class="delivery-job-route">
+              <div class="delivery-route-row">
+                <span class="delivery-dot-pickup"></span>
+                Pickup: Plaza Corner Shop
+              </div>
+              <div class="delivery-route-row">
+                <span class="delivery-dot-drop"></span>
+                Drop: Student Dorm Block B, Room 304
+              </div>
+            </div>
+
+            <div class="delivery-job-footer">
+              <span class="delivery-distance">Distance: 1.2 km</span>
+              <div class="delivery-job-actions">
+                <a href="runner-dashboard.html" class="job-btn-decline">Decline</a>
+                <a href="track-order.html" class="job-btn-accept">Accept</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Active Delivery -->
+        <div>
+          <h2 class="runner-section-title">Active Delivery</h2>
+
+          <div class="active-delivery-card">
+
+            <!-- Top Header Row -->
+            <div class="active-delivery-top">
+              <span class="active-delivery-badge">CURRENT JOB IN PROGRESS</span>
+              <span class="badge badge-primary" style="font-size: var(--font-size-xs);">On the Way</span>
+            </div>
+
+            <!-- Order Number -->
+            <p class="active-delivery-order-num">Order #1042</p>
+
+            <!-- Pickup & Drop Info -->
+            <div class="active-delivery-route">
+              <div class="active-route-section">
+                <p class="active-route-label">PICKUP FROM</p>
+                <p class="active-route-name">UIU Cafeteria Express</p>
+                <p class="active-route-addr">Campus Main Building, Ground Floor</p>
+              </div>
+              <div class="active-route-section" style="margin-bottom:0;">
+                <p class="active-route-label">DELIVER TO</p>
+                <p class="active-route-name">Siam Al-Amin (Student)</p>
+                <p class="active-route-addr">Building 4, Room 302</p>
+              </div>
+            </div>
+
+            <!-- Mini Map -->
+            <div class="runner-mini-map">
+              <!-- Roads horizontal -->
+              <div class="rmap-road-h" style="width:85%; top:38%; left:5%;"></div>
+              <div class="rmap-road-h" style="width:50%; top:65%; left:10%;"></div>
+              <!-- Roads vertical -->
+              <div class="rmap-road-v" style="height:70%; left:28%; top:8%;"></div>
+              <div class="rmap-road-v" style="height:55%; left:60%; top:12%;"></div>
+              <div class="rmap-road-v" style="height:40%; right:12%; top:25%;"></div>
+              <!-- Buildings -->
+              <div class="rmap-building" style="width:48px;height:32px;top:10%;left:4%;"></div>
+              <div class="rmap-building" style="width:52px;height:36px;top:10%;left:35%;"></div>
+              <div class="rmap-building" style="width:44px;height:30px;top:48%;left:8%;"></div>
+              <div class="rmap-building" style="width:50px;height:34px;bottom:10%;right:15%;"></div>
+              <div class="rmap-building" style="width:48px;height:32px;top:12%;right:8%;"></div>
+              <!-- Route (orange/red path) -->
+              <div class="rmap-route" style="width:32%; top:calc(38% - 2px); left:28%;"></div>
+              <div
+                style="position:absolute;width:4px;height:30%;background-color:#e74c3c;border-radius:2px;box-shadow:0 0 5px rgba(231,76,60,0.5);top:8%;left:calc(60% - 2px);">
+              </div>
+              <!-- Runner dot (green = current position) -->
+              <div class="rmap-runner" style="top:34%;left:24%;"></div>
+              <!-- Destination pin (red) -->
+              <div class="rmap-pin" style="top:5%;right:20%;"></div>
+              <!-- Library triangle marker -->
+              <div
+                style="position:absolute;top:8%;left:47%;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:13px solid #8e44ad;opacity:0.7;">
+              </div>
+              <!-- Location labels -->
+              <div
+                style="position:absolute;top:2%;left:35%;font-size:0.5rem;font-weight:700;color:var(--color-primary);background:rgba(255,255,255,0.85);padding:1px 4px;border-radius:3px;">
+                CAFETERIA</div>
+              <div
+                style="position:absolute;top:2%;right:8%;font-size:0.5rem;font-weight:700;color:var(--color-danger);background:rgba(255,255,255,0.85);padding:1px 4px;border-radius:3px;">
+                BLDG 4</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="active-delivery-actions">
+              <a href="track-order.html" class="active-delivery-primary-btn">
+                Confirm Picked Up
+              </a>
+              <div class="active-delivery-secondary-btns">
+                <a href="track-order.html" class="active-secondary-btn">Set On the Way</a>
+                <a href="order-success.html" class="active-secondary-btn">Mark Delivered</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- / runner-body -->
+
+    </main>
+  </div>
+</body>
+
+</html>
