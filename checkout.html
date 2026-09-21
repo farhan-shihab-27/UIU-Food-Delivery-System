@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Delivery — Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body class="checkout-page">
+
+  <!--  NAVBAR  -->
+  <header class="pub-navbar">
+    <div class="pub-navbar-inner">
+      <div class="pub-navbar-left">
+        <a href="restaurant-menu.html" class="pub-navbar-back">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back
+        </a>
+        <a href="index.html" class="pub-navbar-brand">
+          <div class="pub-navbar-brand-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l19-9-9 19-2-8-8-2z" />
+            </svg>
+          </div>
+          <span class="pub-navbar-brand-text">UIU Food Delivery</span>
+        </a>
+      </div>
+      <nav class="pub-navbar-links">
+        <a href="index.html" class="pub-navbar-link">Home</a>
+        <a href="restaurant-menu.html" class="pub-navbar-link active">Shops</a>
+        <a href="index.html#about" class="pub-navbar-link">About</a>
+        <a href="index.html#contact" class="pub-navbar-link">Contact</a>
+      </nav>
+      <a href="profile.html" class="pub-navbar-user">
+        <img
+          src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&q=80&auto=format&fit=crop&face=center"
+          alt="Al-Amin Siam" />
+        Al-Amin Siam
+      </a>
+    </div>
+  </header>
+
+  <!--  CHECKOUT BODY  -->
+  <div class="checkout-body">
+
+    <!--  LEFT: CHECKOUT FORM  -->
+    <div class="checkout-left">
+      <h1 class="checkout-main-title">Checkout</h1>
+
+      <!-- 1. Delivery Address -->
+      <div class="checkout-section-card">
+        <p class="checkout-section-label">1. Delivery Address</p>
+        <div class="input-icon-wrap">
+          <span class="input-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </span>
+          <input type="text" class="checkout-address-input form-input" placeholder="Enter your delivery address"
+            value="UIU Building 4, Room 302" />
+        </div>
+      </div>
+
+      <!-- 2. Delivery Time -->
+      <div class="checkout-section-card">
+        <p class="checkout-section-label">2. Delivery Time</p>
+        <div class="delivery-time-btns">
+          <a href="checkout.html" class="delivery-time-btn active">As soon as possible (15-20 mins)</a>
+          <a href="checkout.html" class="delivery-time-btn">Schedule for later...</a>
+        </div>
+      </div>
+
+      <!-- 3. Payment Method -->
+      <div class="checkout-section-card">
+        <p class="checkout-section-label">3. Payment Method</p>
+
+        <div class="payment-option selected">
+          <span class="payment-radio-dot"></span>
+          <div class="payment-option-info">
+            <p class="payment-option-name">UIU Student Wallet</p>
+            <p class="payment-option-sub">Current Balance: $25.00</p>
+          </div>
+        </div>
+
+        <div class="payment-option">
+          <span class="payment-radio-dot" style="border-color: var(--color-border);"></span>
+          <div class="payment-option-info">
+            <p class="payment-option-name">Cash on Delivery</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Order Summary -->
+      <div class="checkout-summary-card">
+        <p class="checkout-summary-title">Order Summary</p>
+        <div class="checkout-summary-row">
+          <span>2x Beef Cheese Burger</span>
+          <span>$9.00</span>
+        </div>
+        <div class="checkout-summary-row">
+          <span>1x Hazelnut Frappe</span>
+          <span>$3.75</span>
+        </div>
+        <div class="checkout-summary-row"
+          style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-border-light);">
+          <span>Subtotal</span>
+          <span>$12.75</span>
+        </div>
+        <div class="checkout-summary-row">
+          <span>Delivery Fee</span>
+          <span>$1.50</span>
+        </div>
+        <div class="checkout-summary-row total">
+          <span>Total (incl. VAT)</span>
+          <span class="cht-val">$14.25</span>
+        </div>
+      </div>
+
+      <!-- Place Order CTA -->
+      <a href="order-success.html" class="btn btn-primary btn-full btn-lg">
+        Place Order
+      </a>
+    </div>
+
+    <!--  RIGHT: TRACK YOUR ORDER  -->
+    <div class="checkout-right">
+      <h1 class="track-main-title">Track Your Order</h1>
+
+      <!-- Active Progress Steps -->
+      <div class="track-progress-card">
+        <p class="track-progress-label">Active Progress</p>
+        <div class="track-steps-row">
+
+          <!-- Placed (done) -->
+          <div class="track-step done">
+            <div class="track-step-circle done"></div>
+            <span class="track-step-label">Placed</span>
+          </div>
+          <div class="track-step-connector done"></div>
+
+          <!-- Accepted (done) -->
+          <div class="track-step done">
+            <div class="track-step-circle done"></div>
+            <span class="track-step-label">Accepted</span>
+          </div>
+          <div class="track-step-connector done"></div>
+
+          <!-- Preparing (done) -->
+          <div class="track-step done">
+            <div class="track-step-circle done"></div>
+            <span class="track-step-label">Preparing</span>
+          </div>
+          <div class="track-step-connector"></div>
+
+          <!-- Ready (pending) -->
+          <div class="track-step">
+            <div class="track-step-circle"></div>
+            <span class="track-step-label">Ready</span>
+          </div>
+          <div class="track-step-connector"></div>
+
+          <!-- Picked Up (pending) -->
+          <div class="track-step">
+            <div class="track-step-circle"></div>
+            <span class="track-step-label">Picked Up</span>
+          </div>
+          <div class="track-step-connector"></div>
+
+          <!-- Transit (pending) -->
+          <div class="track-step">
+            <div class="track-step-circle"></div>
+            <span class="track-step-label">Transit</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Runner Info Card -->
+      <div class="track-runner-card">
+        <div class="track-runner-info">
+          <div class="track-runner-left">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop&face=center"
+              alt="Rafiq Ahmed" class="track-runner-avatar" />
+            <div>
+              <p class="track-runner-name">Rafiq Ahmed</p>
+              <p class="track-runner-role">UIU Student Delivery Partner</p>
+            </div>
+          </div>
+          <div class="track-runner-rating">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            4.9
+          </div>
+        </div>
+        <div class="track-eta-row">
+          <span class="track-eta-label">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            Est. Arrival Time:
+          </span>
+          <span class="track-eta-value">12 mins</span>
+        </div>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div class="map-placeholder-wrap">
+        <div class="map-placeholder">
+          <!-- Roads -->
+          <div class="map-road-h" style="width:85%; top:35%; left:5%;"></div>
+          <div class="map-road-h" style="width:70%; top:60%; left:15%;"></div>
+          <div class="map-road-v" style="height:75%; left:30%; top:10%;"></div>
+          <div class="map-road-v" style="height:60%; left:55%; top:20%;"></div>
+          <div class="map-road-v" style="height:50%; right:15%; top:25%;"></div>
+          <!-- Route (green line) -->
+          <div class="map-road-route" style="width:28%; top:calc(35% - 2px); left:30%;"></div>
+          <div class="map-road-route"
+            style="width:4px; height:28%; top:33%; left:calc(58% - 2px); transform: rotate(0deg); border-radius:2px; background-color:var(--color-primary);">
+          </div>
+          <!-- Buildings -->
+          <div class="map-building" style="width:70px;height:40px;top:12%;left:5%;">ADMIN<br />BLOCK</div>
+          <div class="map-building" style="width:55px;height:35px;top:15%;left:35%;">LIBRARY</div>
+          <div class="map-building" style="width:60px;height:38px;top:45%;left:34%;">STUDENT<br />HALL</div>
+          <div class="map-building" style="width:65px;height:36px;top:12%;right:8%;">SCIENCE<br />BLOCK</div>
+          <div class="map-building" style="width:70px;height:38px;bottom:12%;right:6%;">DORM<br />EAST</div>
+          <!-- Runner dot (green = current location) -->
+          <div class="map-runner-dot" style="top:31%;left:27%;"></div>
+          <!-- Destination pin (red) -->
+          <div class="map-pin" style="top:10%;right:22%;">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-tail"></div>
+          </div>
+        </div>
+        <div class="map-footer">
+          <span class="map-footer-label">
+            <span class="map-live-dot"></span>
+            Live Location (Runner is near Building 3)
+          </span>
+          <div style="display:flex; gap:8px;">
+            <a href="track-order.html" class="btn btn-primary btn-sm">Track Order</a>
+            <a href="chat.html" class="btn btn-outline btn-sm">Chat with Runner</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--  FOOTER  -->
+  <footer class="home-footer" style="margin-top: var(--space-10);">
+    <div class="home-footer-inner">
+      <div class="home-footer-top">
+        <div>
+          <p class="footer-brand-name">UIU Food Delivery Portal</p>
+          <p class="footer-brand-desc">Connecting hungry campus students with local culinary delights, run and delivered
+            by fellow peers.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Platform</p>
+          <ul class="footer-links">
+            <li><a href="student-dashboard.html" class="footer-link">Browse Shops</a></li>
+            <li><a href="login.html" class="footer-link">Become a Runner</a></li>
+            <li><a href="login.html" class="footer-link">Register Store</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Support</p>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">FAQs</a></li>
+            <li><a href="index.html" class="footer-link">Contact Help</a></li>
+            <li><a href="index.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="home-footer-bottom">
+        <p class="footer-copyright">&copy; 2026 UIU Food Delivery. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="index.html" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="index.html" aria-label="Twitter"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg></a>
+          <a href="index.html" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

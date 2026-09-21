@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Delivery — Rate Your Delivery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <div class="rate-page">
+    <div class="rate-card">
+
+      <!-- Gold Star Icon -->
+      <div class="rate-icon-wrap">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="#f5a623">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      </div>
+
+      <h1 class="rate-title">Rate Your Delivery</h1>
+      <p class="rate-subtitle">How was your experience with Order #1042?</p>
+
+      <!-- Rider Row -->
+      <div class="rate-rider-row">
+        <img
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80&auto=format&fit=crop&face=center"
+          alt="Rafiq Ahmed" class="rate-rider-avatar" />
+        <div>
+          <p class="rate-rider-name">Rafiq Ahmed</p>
+          <p class="rate-rider-sub">Your Delivery Partner</p>
+        </div>
+      </div>
+
+      <!-- Overall Star Rating — CSS-only hover trick using row-reverse -->
+      <span class="star-rating-label-text">Overall Rating</span>
+      <div class="star-rating">
+        <input type="radio" id="star5r" name="rating" value="5" />
+        <label for="star5r" title="5 stars">&#9733;</label>
+        <input type="radio" id="star4r" name="rating" value="4" checked />
+        <label for="star4r" title="4 stars">&#9733;</label>
+        <input type="radio" id="star3r" name="rating" value="3" />
+        <label for="star3r" title="3 stars">&#9733;</label>
+        <input type="radio" id="star2r" name="rating" value="2" />
+        <label for="star2r" title="2 stars">&#9733;</label>
+        <input type="radio" id="star1r" name="rating" value="1" />
+        <label for="star1r" title="1 star">&#9733;</label>
+      </div>
+
+      <!-- Per-Category Ratings -->
+      <div class="rate-categories">
+
+        <div class="rate-category-row">
+          <span class="rate-category-label">Food Quality</span>
+          <div class="star-mini">
+            <input type="radio" id="star5f" name="food" value="5" checked />
+            <label for="star5f">&#9733;</label>
+            <input type="radio" id="star4f" name="food" value="4" />
+            <label for="star4f">&#9733;</label>
+            <input type="radio" id="star3f" name="food" value="3" />
+            <label for="star3f">&#9733;</label>
+            <input type="radio" id="star2f" name="food" value="2" />
+            <label for="star2f">&#9733;</label>
+            <input type="radio" id="star1f" name="food" value="1" />
+            <label for="star1f">&#9733;</label>
+          </div>
+        </div>
+
+        <div class="rate-category-row">
+          <span class="rate-category-label">Delivery Speed</span>
+          <div class="star-mini">
+            <input type="radio" id="star5s" name="speed" value="5" />
+            <label for="star5s">&#9733;</label>
+            <input type="radio" id="star4s" name="speed" value="4" checked />
+            <label for="star4s">&#9733;</label>
+            <input type="radio" id="star3s" name="speed" value="3" />
+            <label for="star3s">&#9733;</label>
+            <input type="radio" id="star2s" name="speed" value="2" />
+            <label for="star2s">&#9733;</label>
+            <input type="radio" id="star1s" name="speed" value="1" />
+            <label for="star1s">&#9733;</label>
+          </div>
+        </div>
+
+        <div class="rate-category-row">
+          <span class="rate-category-label">Packaging</span>
+          <div class="star-mini">
+            <input type="radio" id="star5p" name="pack" value="5" checked />
+            <label for="star5p">&#9733;</label>
+            <input type="radio" id="star4p" name="pack" value="4" />
+            <label for="star4p">&#9733;</label>
+            <input type="radio" id="star3p" name="pack" value="3" />
+            <label for="star3p">&#9733;</label>
+            <input type="radio" id="star2p" name="pack" value="2" />
+            <label for="star2p">&#9733;</label>
+            <input type="radio" id="star1p" name="pack" value="1" />
+            <label for="star1p">&#9733;</label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Comment -->
+      <textarea class="rate-comment" placeholder="Share your experience about the food and delivery..."></textarea>
+
+      <!-- Submit -->
+      <a href="order-history.html" class="btn btn-primary"
+        style="display:block; text-align:center; width:100%; box-sizing:border-box;">
+        <i class="fa-solid fa-paper-plane" style="margin-right:6px;"></i>Submit Rating
+      </a>
+      <a href="student-dashboard.html" class="rate-back-link">
+        <i class="fa-solid fa-house" style="margin-right:4px;"></i>Back to Dashboard
+      </a>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
