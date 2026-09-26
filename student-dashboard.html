@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Portal — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!--  SIDEBAR  -->
+    <aside class="sidebar">
+      <!-- Logo -->
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" />
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">UIU Food Portal</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-nav-item active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home
+        </a>
+        <a href="index.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          Browse Shops
+        </a>
+        <a href="order-history.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          My Orders
+        </a>
+        <a href="wallet.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+          </svg>
+          Wallet
+        </a>
+        <a href="chat.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Messages
+        </a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Profile
+        </a>
+      </nav>
+
+      <!-- User Footer -->
+      <div class="sidebar-user">
+        <img
+          src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&q=80&auto=format&fit=crop&face=center"
+          alt="Al-Amin Siam" class="sidebar-user-avatar" />
+        <div class="sidebar-user-info">
+          <p class="sidebar-user-name">Al-Amin Siam</p>
+          <p class="sidebar-user-role">Student Account</p>
+          <a href="login.html" class="sidebar-logout">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            Log out
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!--  MAIN CONTENT  -->
+    <main class="main-content">
+
+      <!-- Topbar -->
+      <div class="dashboard-topbar">
+        <a href="index.html" class="topbar-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back
+        </a>
+        <div class="topbar-search-wrap">
+          <span class="search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </span>
+          <input type="text" class="topbar-search-input" placeholder="Search for restaurant, food or order..." />
+        </div>
+      </div>
+
+      <!-- Dashboard Page Title -->
+      <h1 class="dashboard-page-title">Dashboard</h1>
+
+      <!-- Hero Banner -->
+      <div class="dashboard-hero">
+        <div class="dashboard-hero-content">
+          <h2 class="dashboard-hero-title">Welcome back, Student!</h2>
+          <p class="dashboard-hero-desc">
+            Hungry between classes? Fellow students are ready to deliver hot food straight to your current classroom,
+            dorm, or workspace.
+          </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=320&q=80&auto=format&fit=crop"
+          alt="Delivery illustration" class="dashboard-hero-img" />
+      </div>
+
+      <!-- Dashboard Body -->
+      <div class="dashboard-body">
+
+        <!-- Quick Categories -->
+        <div class="db-section-header">
+          <h2 class="db-section-title">Quick Categories</h2>
+        </div>
+        <div class="quick-categories">
+          <a href="restaurant-menu.html" class="quick-category-pill"><span class="quick-category-dot"></span> Burger</a>
+          <a href="restaurant-menu.html" class="quick-category-pill"><span class="quick-category-dot"></span> Pizza</a>
+          <a href="restaurant-menu.html" class="quick-category-pill"><span class="quick-category-dot"></span> Rice</a>
+          <a href="restaurant-menu.html" class="quick-category-pill"><span class="quick-category-dot"></span> Snacks</a>
+          <a href="restaurant-menu.html" class="quick-category-pill"><span class="quick-category-dot"></span> Drinks</a>
+          <a href="restaurant-menu.html" class="quick-category-pill"><span class="quick-category-dot"></span>
+            Desserts</a>
+        </div>
+
+        <!-- Nearby Restaurants -->
+        <div class="db-section-header" style="margin-top: var(--space-6);">
+          <h2 class="db-section-title">Nearby Restaurants</h2>
+          <a href="restaurant-menu.html" class="db-section-link">View All</a>
+        </div>
+        <div class="db-restaurants-grid">
+
+          <!-- Card 1 -->
+          <a href="restaurant-menu.html" class="db-restaurant-card">
+            <div class="db-restaurant-img">
+              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=80&auto=format&fit=crop"
+                alt="UIU Cafeteria Express" />
+            </div>
+            <div class="db-restaurant-body">
+              <p class="db-restaurant-name">UIU Cafeteria Express</p>
+              <div class="db-restaurant-meta">
+                <span class="rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#f5a623">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  4.8
+                </span>
+                <span class="time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  15 min
+                </span>
+              </div>
+              <div class="db-view-menu-btn">View Menu</div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="restaurant-menu.html" class="db-restaurant-card">
+            <div class="db-restaurant-img">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80&auto=format&fit=crop"
+                alt="Kazi's Pizza Hub" />
+            </div>
+            <div class="db-restaurant-body">
+              <p class="db-restaurant-name">Kazi's Pizza Hub</p>
+              <div class="db-restaurant-meta">
+                <span class="rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#f5a623">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  4.6
+                </span>
+                <span class="time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  22 min
+                </span>
+              </div>
+              <div class="db-view-menu-btn">View Menu</div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="restaurant-menu.html" class="db-restaurant-card">
+            <div class="db-restaurant-img">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=80&auto=format&fit=crop"
+                alt="The Green Student Cafe" />
+            </div>
+            <div class="db-restaurant-body">
+              <p class="db-restaurant-name">The Green Student Cafe</p>
+              <div class="db-restaurant-meta">
+                <span class="rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#f5a623">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  4.9
+                </span>
+                <span class="time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  12 min
+                </span>
+              </div>
+              <div class="db-view-menu-btn">View Menu</div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="restaurant-menu.html" class="db-restaurant-card">
+            <div class="db-restaurant-img">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80&auto=format&fit=crop"
+                alt="Siam's Fast Food &amp; Bakery" />
+            </div>
+            <div class="db-restaurant-body">
+              <p class="db-restaurant-name">Siam's Fast Food &amp; Bakery</p>
+              <div class="db-restaurant-meta">
+                <span class="rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#f5a623">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  4.4
+                </span>
+                <span class="time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  18 min
+                </span>
+              </div>
+              <div class="db-view-menu-btn">View Menu</div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Bottom Two-Column -->
+        <div class="db-bottom-grid">
+
+          <!-- Recent Orders -->
+          <div>
+            <div class="db-section-header">
+              <h2 class="db-section-title">Recent Orders</h2>
+            </div>
+
+            <!-- Order 1 -->
+            <div class="recent-order-card">
+              <div class="recent-order-header">
+                <div>
+                  <p class="recent-order-name">UIU Cafeteria Express</p>
+                  <p class="recent-order-items">1x Beef Burger, 1x Hazelnut Coffee</p>
+                  <p class="recent-order-time">Today, 12:45 PM</p>
+                </div>
+                <span class="badge badge-primary">In Delivery</span>
+              </div>
+              <div class="recent-order-footer">
+                <span class="recent-order-total">Total: $12.50</span>
+                <a href="checkout.html" class="btn btn-outline btn-sm">Reorder</a>
+              </div>
+            </div>
+
+            <!-- Order 2 -->
+            <div class="recent-order-card">
+              <div class="recent-order-header">
+                <div>
+                  <p class="recent-order-name">Kazi's Pizza Hub</p>
+                  <p class="recent-order-items">1x Pepperoni Slice, 1x Coca Cola</p>
+                  <p class="recent-order-time">Yesterday, 6:15 PM</p>
+                </div>
+                <span class="badge badge-success">Completed</span>
+              </div>
+              <div class="recent-order-footer">
+                <span class="recent-order-total">Total: $12.50</span>
+                <a href="checkout.html" class="btn btn-outline btn-sm">Reorder</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended for You -->
+          <div>
+            <div class="db-section-header">
+              <h2 class="db-section-title">Recommended for You</h2>
+            </div>
+
+            <!-- Item 1 -->
+            <div class="recommended-item">
+              <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=120&q=80&auto=format&fit=crop"
+                alt="Smoky BBQ Wings" class="recommended-img" />
+              <div class="recommended-info">
+                <p class="recommended-name">Smoky BBQ Wings</p>
+                <div class="recommended-meta">
+                  <span class="price">$3.50</span>
+                  <span class="rating">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f5a623">
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    4.7
+                  </span>
+                </div>
+              </div>
+              <a href="restaurant-menu.html" class="add-btn-round">+</a>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="recommended-item">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&q=80&auto=format&fit=crop"
+                alt="Double Cheese Margherita Pizza" class="recommended-img" />
+              <div class="recommended-info">
+                <p class="recommended-name">Double Cheese Margherita Pizza</p>
+                <div class="recommended-meta">
+                  <span class="price">$7.20</span>
+                  <span class="rating">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f5a623">
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    4.9
+                  </span>
+                </div>
+              </div>
+              <a href="restaurant-menu.html" class="add-btn-round">+</a>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="recommended-item">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=120&q=80&auto=format&fit=crop"
+                alt="Mango Smoothie Premium" class="recommended-img" />
+              <div class="recommended-info">
+                <p class="recommended-name">Mango Smoothie Premium</p>
+                <div class="recommended-meta">
+                  <span class="price">$2.99</span>
+                  <span class="rating">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f5a623">
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    4.5
+                  </span>
+                </div>
+              </div>
+              <a href="restaurant-menu.html" class="add-btn-round">+</a>
+            </div>
+          </div>
+
+        </div><!-- / db-bottom-grid -->
+
+      </div><!-- / dashboard-body -->
+    </main>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Portal — Profile &amp; Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!--  SIDEBAR  -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" />
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">UIU Food Portal</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home
+        </a>
+        <a href="index.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          Browse Shops
+        </a>
+        <a href="order-history.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          My Orders
+        </a>
+        <a href="wallet.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+          </svg>
+          Wallet
+        </a>
+        <a href="chat.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Messages
+        </a>
+        <a href="profile.html" class="sidebar-nav-item active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Profile
+        </a>
+      </nav>
+
+      <!-- User Footer -->
+      <div class="sidebar-user">
+        <img
+          src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&q=80&auto=format&fit=crop&face=center"
+          alt="Ahmed Rahman" class="sidebar-user-avatar" />
+        <div class="sidebar-user-info">
+          <p class="sidebar-user-name">Ahmed Rahman</p>
+          <p class="sidebar-user-role">Student Account</p>
+          <a href="login.html" class="sidebar-logout">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            Log out
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!--  MAIN CONTENT  -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Profile &amp; Settings</h1>
+          <p class="page-subtitle">Manage your personal information, delivery preferences, and security settings.</p>
+        </div>
+        <div class="wallet-chip">
+          <span class="wallet-chip-label">Wallet Balance</span>
+          <span class="wallet-chip-value">&#2547; 1,240.00</span>
+        </div>
+      </div>
+
+      <!-- Page Body -->
+      <div class="page-body">
+        <div class="profile-layout">
+
+          <!-- LEFT COLUMN -->
+          <div>
+
+            <!-- Identity Card -->
+            <div class="profile-identity-card">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80&auto=format&fit=crop&face=center"
+                alt="Ahmed Rahman" class="profile-avatar" />
+              <div class="profile-name-block">
+                <div class="profile-name-row">
+                  <span class="profile-name">Ahmed Rahman</span>
+                  <span class="badge badge-verified">VERIFIED STUDENT</span>
+                </div>
+                <div class="profile-meta-row">
+                  <span>Student ID: <strong>2021-3-60-123</strong></span>
+                  <span>Email: <strong>ahmed.rahman@uiu.ac.bd</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Information Form -->
+            <div class="profile-form-card">
+              <h2 class="profile-form-title">Personal Information</h2>
+              <p class="profile-form-desc">Update your contact details and portal credentials below.</p>
+
+              <form action="#" method="get">
+                <div class="form-group">
+                  <label class="form-label" for="fullname">Full Name</label>
+                  <input type="text" id="fullname" class="form-input" value="Ahmed Rahman" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input type="tel" id="phone" class="form-input" value="+880 1712 345 678" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address">Default Delivery Address</label>
+                  <input type="text" id="address" class="form-input"
+                    value="UIU Student Hall, Room 402B, Bhatara, Dhaka" />
+                </div>
+
+                <div class="password-row">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="new-pass">New Password</label>
+                    <input type="password" id="new-pass" class="form-input" placeholder="••••••••" />
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="confirm-pass">Confirm New Password</label>
+                    <input type="password" id="confirm-pass" class="form-input" placeholder="••••••••" />
+                  </div>
+                </div>
+
+                <div class="profile-form-actions">
+                  <a href="student-dashboard.html" class="btn btn-ghost">Cancel</a>
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="profile-right-panel">
+
+            <!-- Notification Preferences -->
+            <div class="settings-card">
+              <h3 class="settings-card-title">Notification Preferences</h3>
+
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <p class="settings-row-name">Order Updates</p>
+                  <p class="settings-row-desc">SMS and app alerts for live orders</p>
+                </div>
+                <input type="checkbox" id="toggle-orders" class="toggle-input" checked />
+                <label for="toggle-orders" class="toggle-label">
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <p class="settings-row-name">Promotions &amp; Offers</p>
+                  <p class="settings-row-desc">Discounts and special deal notifications</p>
+                </div>
+                <input type="checkbox" id="toggle-promo" class="toggle-input" />
+                <label for="toggle-promo" class="toggle-label">
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <p class="settings-row-name">Email Notifications</p>
+                  <p class="settings-row-desc">Receive invoices and weekly summaries</p>
+                </div>
+                <input type="checkbox" id="toggle-email" class="toggle-input" checked />
+                <label for="toggle-email" class="toggle-label">
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Appearance -->
+            <div class="settings-card">
+              <h3 class="settings-card-title">Appearance</h3>
+              <div class="settings-row" style="border-bottom: none; padding-bottom:0;">
+                <div class="settings-row-info">
+                  <p class="settings-row-name">Dark Mode</p>
+                  <p class="settings-row-desc">Switch to a dark UI layout</p>
+                </div>
+                <input type="checkbox" id="toggle-dark" class="toggle-input" />
+                <label for="toggle-dark" class="toggle-label">
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Account Actions -->
+            <div class="settings-card">
+              <h3 class="settings-card-title">Account Actions</h3>
+              <div class="danger-zone-card">
+                <div>
+                  <p class="danger-zone-title">Danger Zone</p>
+                  <p class="danger-zone-desc">Temporarily deactivate or permanently close this food portal account.</p>
+                </div>
+                <a href="profile.html" class="btn btn-danger btn-sm" style="flex-shrink:0;">Deactivate</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- / page-body -->
+
+    </main>
+  </div>
+</body>
+
+</html>
