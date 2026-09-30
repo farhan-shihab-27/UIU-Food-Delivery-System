@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Delivery — Order Food Around Campus</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body class="home-page">
+
+  <!--  NAVBAR  -->
+  <header class="home-navbar">
+    <div class="home-navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="navbar-brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" />
+          </svg>
+        </div>
+        <span class="navbar-brand-text">UIU Food Delivery</span>
+      </a>
+
+      <nav class="navbar-links">
+        <a href="index.html" class="navbar-link active">Home</a>
+        <a href="#shops" class="navbar-link">Shops</a>
+        <a href="#about" class="navbar-link">About</a>
+        <a href="#contact" class="navbar-link">Contact</a>
+      </nav>
+
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+  </header>
+
+  <!--  HERO  -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Order Food Around Campus Easily</h1>
+      <p class="hero-desc">
+        Fresh meals from your favorite campus restaurants, delivered by fellow students right to your dorm or
+        department.
+      </p>
+      <div class="hero-search-row">
+        <div class="hero-search-wrap">
+          <span class="search-icon">
+            <i class="fa-solid fa-magnifying-glass" style="font-size:0.9rem;"></i>
+          </span>
+          <input type="text" class="hero-search-input"
+            placeholder="Search for food, snacks, drinks or restaurants..." />
+        </div>
+        <a href="student-dashboard.html" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80&auto=format&fit=crop"
+        alt="Delicious burger with fries and cold drink" />
+    </div>
+  </section>
+
+  <!--  CATEGORIES  -->
+  <section class="home-section" style="padding-top: var(--space-4); padding-bottom: var(--space-6);">
+    <h2 class="section-title">What are you craving today?</h2>
+    <div class="category-grid">
+      <a href="student-dashboard.html" class="category-item">
+        <div class="category-circle">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&q=80&auto=format&fit=crop"
+            alt="Burger" />
+        </div>
+        <span class="category-name">Burger</span>
+      </a>
+      <a href="student-dashboard.html" class="category-item">
+        <div class="category-circle">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200&q=80&auto=format&fit=crop"
+            alt="Pizza" />
+        </div>
+        <span class="category-name">Pizza</span>
+      </a>
+      <a href="student-dashboard.html" class="category-item">
+        <div class="category-circle">
+          <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&q=80&auto=format&fit=crop"
+            alt="Rice" />
+        </div>
+        <span class="category-name">Rice</span>
+      </a>
+      <a href="student-dashboard.html" class="category-item">
+        <div class="category-circle">
+          <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=200&q=80&auto=format&fit=crop"
+            alt="Snacks" />
+        </div>
+        <span class="category-name">Snacks</span>
+      </a>
+      <a href="student-dashboard.html" class="category-item">
+        <div class="category-circle">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&q=80&auto=format&fit=crop"
+            alt="Drinks" />
+        </div>
+        <span class="category-name">Drinks</span>
+      </a>
+      <a href="student-dashboard.html" class="category-item">
+        <div class="category-circle">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&q=80&auto=format&fit=crop"
+            alt="Desserts" />
+        </div>
+        <span class="category-name">Desserts</span>
+      </a>
+    </div>
+  </section>
+
+  <!--  FEATURED RESTAURANTS  -->
+  <section class="home-section" id="shops" style="padding-top: var(--space-6);">
+    <div class="section-header">
+      <h2 class="section-title" style="margin-bottom:0;">Featured Campus Restaurants</h2>
+      <a href="student-dashboard.html" class="section-link">View All (3)</a>
+    </div>
+    <div class="restaurants-grid">
+      <a href="restaurant-menu.html" class="restaurant-card">
+        <div class="restaurant-card-img">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&q=80&auto=format&fit=crop"
+            alt="UIU Cafeteria Express" />
+          <span class="restaurant-open-badge">OPEN</span>
+        </div>
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">UIU Cafeteria Express</h3>
+          <p class="restaurant-card-desc">Local favorite for hot home-cooked campus meals</p>
+          <div class="restaurant-meta">
+            <span class="rating">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#f5a623">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              4.8
+            </span>
+            <span class="time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              15-20 min
+            </span>
+          </div>
+          <div class="view-menu-btn">View Menu</div>
+        </div>
+      </a>
+
+      <a href="restaurant-menu.html" class="restaurant-card">
+        <div class="restaurant-card-img">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80&auto=format&fit=crop"
+            alt="Kazi's Pizza Hub" />
+          <span class="restaurant-open-badge">OPEN</span>
+        </div>
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Kazi's Pizza Hub</h3>
+          <p class="restaurant-card-desc">Artisanal pizzas and cheese garlic breads</p>
+          <div class="restaurant-meta">
+            <span class="rating">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#f5a623">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              4.6
+            </span>
+            <span class="time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              20-25 min
+            </span>
+          </div>
+          <div class="view-menu-btn">View Menu</div>
+        </div>
+      </a>
+
+      <a href="restaurant-menu.html" class="restaurant-card">
+        <div class="restaurant-card-img">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80&auto=format&fit=crop"
+            alt="The Green Student Cafe" />
+          <span class="restaurant-open-badge">OPEN</span>
+        </div>
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">The Green Student Cafe</h3>
+          <p class="restaurant-card-desc">Premium organic coffee, bubble tea &amp; fresh healthy wraps</p>
+          <div class="restaurant-meta">
+            <span class="rating">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#f5a623">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              4.9
+            </span>
+            <span class="time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              10-15 min
+            </span>
+          </div>
+          <div class="view-menu-btn">View Menu</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!--  POPULAR FOODS  -->
+  <section style="background-color: var(--color-white); padding: var(--space-10) 0;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 var(--space-8);">
+      <h2 class="section-title">Popular Foods Near You</h2>
+      <div class="foods-grid">
+        <div class="food-card">
+          <div class="food-card-img">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80&auto=format&fit=crop"
+              alt="Crispy Spicy Chicken Burger" />
+          </div>
+          <div class="food-card-body">
+            <p class="food-card-name">Crispy Spicy Chicken Burger</p>
+            <p class="food-card-price">$4.50</p>
+            <a href="login.html" class="add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <div class="food-card-img">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80&auto=format&fit=crop"
+              alt="Cheesy Pepperoni Feast Pizza" />
+          </div>
+          <div class="food-card-body">
+            <p class="food-card-name">Cheesy Pepperoni Feast Pizza</p>
+            <p class="food-card-price">$8.99</p>
+            <a href="login.html" class="add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <div class="food-card-img">
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80&auto=format&fit=crop"
+              alt="Chef's Chicken Fried Rice" />
+          </div>
+          <div class="food-card-body">
+            <p class="food-card-name">Chef's Chicken Fried Rice</p>
+            <p class="food-card-price">$5.25</p>
+            <a href="login.html" class="add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <div class="food-card-img">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80&auto=format&fit=crop"
+              alt="Creamy Hazelnut Frappuccino" />
+          </div>
+          <div class="food-card-body">
+            <p class="food-card-name">Creamy Hazelnut Frappuccino</p>
+            <p class="food-card-price">$3.75</p>
+            <a href="login.html" class="add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="home-footer" id="about">
+    <div class="home-footer-inner">
+      <div class="home-footer-top">
+        <div>
+          <p class="footer-brand-name">UIU Food Delivery Portal</p>
+          <p class="footer-brand-desc">Connecting hungry campus students with local culinary delights, run and delivered
+            by fellow peers.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Platform</p>
+          <ul class="footer-links">
+            <li><a href="student-dashboard.html" class="footer-link">Browse Shops</a></li>
+            <li><a href="login.html" class="footer-link">Become a Runner</a></li>
+            <li><a href="login.html" class="footer-link">Register Store</a></li>
+          </ul>
+        </div>
+        <div id="contact">
+          <p class="footer-col-title">Support</p>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">FAQs</a></li>
+            <li><a href="index.html" class="footer-link">Contact Help</a></li>
+            <li><a href="index.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="home-footer-bottom">
+        <p class="footer-copyright">&copy; 2026 UIU Food Delivery. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="index.html" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <a href="index.html" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg>
+          </a>
+          <a href="index.html" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
