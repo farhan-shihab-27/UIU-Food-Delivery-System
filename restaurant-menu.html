@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Cafeteria Express — Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body style="background-color: var(--color-white);">
+
+  <!--  NAVBAR  -->
+  <header class="pub-navbar">
+    <div class="pub-navbar-inner">
+      <div class="pub-navbar-left">
+        <a href="student-dashboard.html" class="pub-navbar-back">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back
+        </a>
+        <a href="index.html" class="pub-navbar-brand">
+          <div class="pub-navbar-brand-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l19-9-9 19-2-8-8-2z" />
+            </svg>
+          </div>
+          <span class="pub-navbar-brand-text">UIU Food Delivery</span>
+        </a>
+      </div>
+
+      <nav class="pub-navbar-links">
+        <a href="index.html" class="pub-navbar-link">Home</a>
+        <a href="restaurant-menu.html" class="pub-navbar-link active">Shops</a>
+        <a href="index.html#about" class="pub-navbar-link">About</a>
+        <a href="index.html#contact" class="pub-navbar-link">Contact</a>
+      </nav>
+
+      <a href="profile.html" class="pub-navbar-user">
+        <img
+          src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&q=80&auto=format&fit=crop&face=center"
+          alt="Al-Amin Siam" />
+        Al-Amin Siam
+      </a>
+    </div>
+  </header>
+
+  <!--  RESTAURANT HERO  -->
+  <div class="menu-hero">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80&auto=format&fit=crop"
+      alt="UIU Cafeteria Express" class="menu-hero-img" />
+    <div class="menu-hero-overlay"></div>
+    <div class="menu-hero-content">
+      <div class="menu-hero-badges">
+        <span class="menu-hero-open">OPEN</span>
+        <span class="menu-hero-rating">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          4.8 (120+ ratings)
+        </span>
+      </div>
+      <h1 class="menu-hero-title">UIU Cafeteria Express</h1>
+      <div class="menu-hero-meta">
+        <span>Cuisine: Fast Food, Desi, Rice, Drinks</span>
+        <span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+          15-20 min delivery
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!--  MENU BODY  -->
+  <div class="menu-body">
+
+    <!-- LEFT: Menu Items -->
+    <div>
+      <h2 class="menu-section-title">Our Full Menu</h2>
+      <div class="menu-grid">
+
+        <!-- 1: Beef Cheese Burger -->
+        <div class="menu-item-card">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80&auto=format&fit=crop"
+              alt="Beef Cheese Burger" />
+          </div>
+          <div class="menu-item-body">
+            <div class="menu-item-name-row">
+              <span class="menu-item-name">Beef Cheese Burger</span>
+              <span class="menu-item-avail avail-yes">Available</span>
+            </div>
+            <p class="menu-item-desc">Juicy prime beef patty, melted cheddar cheese, signature sauce.</p>
+            <p class="menu-item-price">$4.50</p>
+            <a href="checkout.html" class="menu-add-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <!-- 2: Smoky BBQ Wings -->
+        <div class="menu-item-card">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=400&q=80&auto=format&fit=crop"
+              alt="Smoky BBQ Wings" />
+          </div>
+          <div class="menu-item-body">
+            <div class="menu-item-name-row">
+              <span class="menu-item-name">Smoky BBQ Wings</span>
+              <span class="menu-item-avail avail-yes">Available</span>
+            </div>
+            <p class="menu-item-desc">6 pieces of crispy chicken wings tossed in deep hickory smoky sauce.</p>
+            <p class="menu-item-price">$3.50</p>
+            <a href="checkout.html" class="menu-add-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <!-- 3: Hazelnut Frappe -->
+        <div class="menu-item-card">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80&auto=format&fit=crop"
+              alt="Hazelnut Frappe" />
+          </div>
+          <div class="menu-item-body">
+            <div class="menu-item-name-row">
+              <span class="menu-item-name">Hazelnut Frappe</span>
+              <span class="menu-item-avail avail-yes">Available</span>
+            </div>
+            <p class="menu-item-desc">Chilled espresso blended with rich hazelnut syrup and whipped cream.</p>
+            <p class="menu-item-price">$3.75</p>
+            <a href="checkout.html" class="menu-add-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <!-- 4: Chef's Fried Rice -->
+        <div class="menu-item-card">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80&auto=format&fit=crop"
+              alt="Chef's Fried Rice" />
+          </div>
+          <div class="menu-item-body">
+            <div class="menu-item-name-row">
+              <span class="menu-item-name">Chef's Fried Rice</span>
+              <span class="menu-item-avail avail-yes">Available</span>
+            </div>
+            <p class="menu-item-desc">Stir-fried jasmine rice with seasoned shredded chicken, peas, and eggs.</p>
+            <p class="menu-item-price">$5.25</p>
+            <a href="checkout.html" class="menu-add-btn">Add to Cart</a>
+          </div>
+        </div>
+
+        <!-- 5: Pepperoni Feast Pizza (Unavailable) -->
+        <div class="menu-item-card" style="opacity: 0.75;">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80&auto=format&fit=crop"
+              alt="Pepperoni Feast Pizza" />
+          </div>
+          <div class="menu-item-body">
+            <div class="menu-item-name-row">
+              <span class="menu-item-name">Pepperoni Feast Pi...</span>
+              <span class="menu-item-avail avail-no">Unavailable</span>
+            </div>
+            <p class="menu-item-desc">Classic crust pizza topped with marinara, pepperoni, and mozzarella.</p>
+            <p class="menu-item-price">$8.99</p>
+            <div class="menu-add-btn-disabled">Out of Stock</div>
+          </div>
+        </div>
+
+        <!-- 6: Mango Smoothie -->
+        <div class="menu-item-card">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=400&q=80&auto=format&fit=crop"
+              alt="Mango Smoothie Premium" />
+          </div>
+          <div class="menu-item-body">
+            <div class="menu-item-name-row">
+              <span class="menu-item-name">Mango Smoothie P...</span>
+              <span class="menu-item-avail avail-yes">Available</span>
+            </div>
+            <p class="menu-item-desc">Creamy yogurt-blended real sweet Alphonso mango purée.</p>
+            <p class="menu-item-price">$2.99</p>
+            <a href="checkout.html" class="menu-add-btn">Add to Cart</a>
+          </div>
+        </div>
+
+      </div><!-- / menu-grid -->
+    </div>
+
+    <!-- RIGHT: Cart Panel -->
+    <aside class="cart-panel">
+      <div class="cart-panel-header">
+        <span class="cart-panel-title">Your Cart</span>
+        <span class="cart-item-count">3 Items</span>
+      </div>
+
+      <!-- Cart Item 1 -->
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <p class="cart-item-name">Beef Cheese Burger</p>
+          <p class="cart-item-price">$9.00</p>
+        </div>
+        <div class="cart-qty-ctrl">
+          <a href="restaurant-menu.html" class="cart-qty-btn cart-qty-btn-minus">&#8722;</a>
+          <span class="cart-qty-num">2</span>
+          <a href="restaurant-menu.html" class="cart-qty-btn">+</a>
+        </div>
+      </div>
+
+      <!-- Cart Item 2 -->
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <p class="cart-item-name">Hazelnut Frappe</p>
+          <p class="cart-item-price">$3.75</p>
+        </div>
+        <div class="cart-qty-ctrl">
+          <a href="restaurant-menu.html" class="cart-qty-btn cart-qty-btn-minus">&#8722;</a>
+          <span class="cart-qty-num">1</span>
+          <a href="restaurant-menu.html" class="cart-qty-btn">+</a>
+        </div>
+      </div>
+
+      <!-- Totals -->
+      <div class="cart-totals">
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <span class="cart-total-val">$12.75</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Delivery Fee</span>
+          <span class="cart-total-val">$1.50</span>
+        </div>
+        <div class="cart-total-row grand">
+          <span>Total</span>
+          <span class="cart-total-val">$14.25</span>
+        </div>
+      </div>
+
+      <a href="checkout.html" class="btn btn-primary btn-full" style="margin-top: var(--space-4);">
+        Proceed to Checkout
+      </a>
+    </aside>
+
+  </div><!-- / menu-body -->
+
+  <!--  FOOTER  -->
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+      <div class="home-footer-top">
+        <div>
+          <p class="footer-brand-name">UIU Food Delivery Portal</p>
+          <p class="footer-brand-desc">Connecting hungry campus students with local culinary delights, run and delivered
+            by fellow peers.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Platform</p>
+          <ul class="footer-links">
+            <li><a href="student-dashboard.html" class="footer-link">Browse Shops</a></li>
+            <li><a href="login.html" class="footer-link">Become a Runner</a></li>
+            <li><a href="login.html" class="footer-link">Register Store</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Support</p>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">FAQs</a></li>
+            <li><a href="index.html" class="footer-link">Contact Help</a></li>
+            <li><a href="index.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="home-footer-bottom">
+        <p class="footer-copyright">&copy; 2026 UIU Food Delivery. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="index.html" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="index.html" aria-label="Twitter"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg></a>
+          <a href="index.html" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
