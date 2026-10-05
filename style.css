@@ -6186,3 +6186,16 @@ button {
     display: none;
   }
 }
+/* Login brand icon (replaces the plain title branding) */
+.login-brand-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(31, 122, 62, 0.25);
+}
