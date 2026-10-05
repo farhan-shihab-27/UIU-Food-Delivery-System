@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Delivery — Track Order #1042</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+  <style>
+    .track-order-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 24px 48px;
+    }
+
+    .track-order-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .track-back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .track-back-link:hover {
+      text-decoration: underline;
+    }
+
+    .track-header-text h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-text-primary);
+    }
+
+    .track-header-text p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    .track-order-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 24px;
+    }
+
+    .track-order-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .track-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 22px 24px;
+    }
+
+    .track-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Status banner */
+    .track-status-banner {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #155a2e 100%);
+      border-radius: 14px;
+      padding: 22px 24px;
+      color: #fff;
+    }
+
+    .track-status-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .track-status-text h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .track-status-text p {
+      font-size: 0.88rem;
+      opacity: 0.85;
+      margin-bottom: 14px;
+    }
+
+    .track-progress-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 99px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .track-progress-fill {
+      height: 100%;
+      background: #fff;
+      border-radius: 99px;
+      width: 70%;
+    }
+
+    .track-progress-label {
+      font-size: 0.78rem;
+      opacity: 0.8;
+    }
+
+    /* Timeline */
+    .track-timeline {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .track-timeline-item {
+      display: grid;
+      grid-template-columns: 22px 1fr auto;
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      position: relative;
+    }
+
+    .track-timeline-item+.track-timeline-item {
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    .track-tl-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--color-border);
+      background: var(--color-white);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .track-timeline-item.done .track-tl-dot {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .track-timeline-item.active .track-tl-dot {
+      background: var(--color-white);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 4px rgba(31, 122, 62, 0.15);
+    }
+
+    .track-timeline-item.pending .track-tl-dot {
+      background: var(--color-bg);
+      border-color: var(--color-border);
+    }
+
+    .track-tl-name {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .track-tl-desc {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    .track-timeline-item.pending .track-tl-name,
+    .track-timeline-item.pending .track-tl-desc {
+      color: var(--color-text-muted);
+      opacity: 0.6;
+    }
+
+    .track-tl-time {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+      margin-top: 3px;
+    }
+
+    .track-timeline-item.active .track-tl-name {
+      color: var(--color-primary);
+    }
+
+    .track-timeline-item.active .track-tl-time {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* Order items table */
+    .track-items-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .track-items-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .track-items-table tr:last-child td {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .track-items-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .track-items-table tr:last-child td:last-child {
+      color: var(--color-primary);
+    }
+
+    .item-qty-badge {
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-size: 0.75rem;
+      margin-right: 8px;
+    }
+
+    .item-sub {
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Map */
+    .track-map-body {
+      position: relative;
+      height: 210px;
+      background: linear-gradient(145deg, #e8f5e9 0%, #c8e6c9 60%, #dcedc8 100%);
+      overflow: hidden;
+    }
+
+    .track-map-body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0px, transparent 1px, transparent 40px, rgba(0, 0, 0, 0.04) 41px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.04) 0px, transparent 1px, transparent 40px, rgba(0, 0, 0, 0.04) 41px);
+    }
+
+    .tmap-road-h {
+      position: absolute;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 2px;
+    }
+
+    .tmap-road-v {
+      position: absolute;
+      width: 10px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 2px;
+    }
+
+    .tmap-building {
+      position: absolute;
+      background: rgba(120, 150, 120, 0.35);
+      border-radius: 4px;
+      border: 1px solid rgba(120, 150, 120, 0.25);
+    }
+
+    .tmap-route {
+      position: absolute;
+      height: 5px;
+      background: var(--color-primary);
+      border-radius: 3px;
+      box-shadow: 0 0 8px rgba(31, 122, 62, 0.5);
+    }
+
+    .tmap-rider {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(31, 122, 62, 0.5);
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.7rem;
+    }
+
+    .tmap-pin {
+      position: absolute;
+      color: #e74c3c;
+      font-size: 1.6rem;
+      transform: translate(50%, -90%);
+      z-index: 10;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .tmap-lbl {
+      position: absolute;
+      font-size: 0.58rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 2px 5px;
+      border-radius: 3px;
+      z-index: 5;
+    }
+
+    /* Rider card */
+    .rider-info-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .rider-info-header img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--color-primary-light);
+    }
+
+    .rider-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .rider-sub {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+
+    .rider-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.82rem;
+      color: var(--color-text-secondary);
+      margin-top: 3px;
+    }
+
+    .rider-info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 0.88rem;
+    }
+
+    .rider-info-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .rider-info-lbl {
+      color: var(--color-text-muted);
+    }
+
+    .rider-info-val {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .rider-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .rider-call-btn {
+      flex: 1;
+      padding: 10px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+
+    .rider-call-btn:hover {
+      background: var(--color-primary-dark);
+    }
+
+    .rider-chat-btn {
+      flex: 1;
+      padding: 10px;
+      border: 1.5px solid var(--color-primary);
+      color: var(--color-primary);
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+
+    .rider-chat-btn:hover {
+      background: var(--color-primary-light);
+    }
+
+    /* Bottom actions */
+    .track-bottom-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .track-order-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body style="background-color: var(--color-bg);">
+
+  <div class="track-order-page">
+
+    <!-- HEADER -->
+    <div class="track-order-header">
+      <a href="order-history.html" class="track-back-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+        Back to Orders
+      </a>
+      <div class="track-header-text">
+        <h1>Track Your Order</h1>
+        <p>Order #1042 &bull; UIU Cafeteria Express</p>
+      </div>
+    </div>
+
+    <!-- TWO-COLUMN LAYOUT -->
+    <div class="track-order-layout">
+
+      <!-- LEFT COLUMN -->
+      <div class="track-order-col">
+
+        <!-- Status Banner -->
+        <div class="track-status-banner">
+          <div class="track-status-icon">&#128690;</div>
+          <div class="track-status-text">
+            <h2>Your order is On the Way!</h2>
+            <p>Rafiq Ahmed is heading to your location &bull; Estimated arrival: 10-15 min</p>
+          </div>
+          <div class="track-progress-bar">
+            <div class="track-progress-fill"></div>
+          </div>
+          <span class="track-progress-label">70% complete</span>
+        </div>
+
+        <!-- Progress Timeline -->
+        <div class="track-card">
+          <div class="track-card-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Order Progress
+          </div>
+          <div class="track-timeline">
+
+            <div class="track-timeline-item done">
+              <div class="track-tl-dot"></div>
+              <div>
+                <span class="track-tl-name">Order Placed</span>
+                <span class="track-tl-desc">Your order was successfully received</span>
+              </div>
+              <span class="track-tl-time">12:45 PM</span>
+            </div>
+
+            <div class="track-timeline-item done">
+              <div class="track-tl-dot"></div>
+              <div>
+                <span class="track-tl-name">Order Accepted</span>
+                <span class="track-tl-desc">UIU Cafeteria Express accepted your order</span>
+              </div>
+              <span class="track-tl-time">12:47 PM</span>
+            </div>
+
+            <div class="track-timeline-item done">
+              <div class="track-tl-dot"></div>
+              <div>
+                <span class="track-tl-name">Preparing</span>
+                <span class="track-tl-desc">Your food is being freshly prepared</span>
+              </div>
+              <span class="track-tl-time">12:50 PM</span>
+            </div>
+
+            <div class="track-timeline-item active">
+              <div class="track-tl-dot"></div>
+              <div>
+                <span class="track-tl-name">On the Way</span>
+                <span class="track-tl-desc">Rafiq Ahmed is heading to your location</span>
+              </div>
+              <span class="track-tl-time">1:02 PM</span>
+            </div>
+
+            <div class="track-timeline-item pending">
+              <div class="track-tl-dot"></div>
+              <div>
+                <span class="track-tl-name">Delivered</span>
+                <span class="track-tl-desc">Package delivered to your doorstep</span>
+              </div>
+              <span class="track-tl-time">--</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Order Items -->
+        <div class="track-card">
+          <div class="track-card-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+            </svg>
+            Your Order
+          </div>
+          <table class="track-items-table">
+            <tbody>
+              <tr>
+                <td><span class="item-qty-badge">1&times;</span>Crispy Spicy Chicken Burger</td>
+                <td>$4.50</td>
+              </tr>
+              <tr>
+                <td><span class="item-qty-badge">1&times;</span>Creamy Hazelnut Frappuccino</td>
+                <td>$3.75</td>
+              </tr>
+              <tr>
+                <td class="item-sub">Delivery Partner Fee</td>
+                <td class="item-sub">$1.50</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>$9.75</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bottom CTAs -->
+        <div class="track-bottom-actions">
+          <a href="rate-order.html" class="btn btn-primary">
+            <i class="fa-solid fa-star" style="margin-right:6px;"></i> Rate Your Delivery
+          </a>
+          <a href="order-history.html" class="btn btn-outline">Back to Orders</a>
+        </div>
+
+      </div><!-- /left col -->
+
+      <!-- RIGHT COLUMN -->
+      <div class="track-order-col">
+
+        <!-- CSS Map Card -->
+        <div class="track-card" style="padding: 0; overflow: hidden;">
+          <div
+            style="padding: 14px 18px; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-primary);"></i>
+            Live Rider Location
+          </div>
+          <div class="track-map-body">
+            <!-- Roads -->
+            <div class="tmap-road-h" style="width:80%; top:40%; left:5%;"></div>
+            <div class="tmap-road-h" style="width:55%; top:66%; left:15%;"></div>
+            <div class="tmap-road-v" style="height:65%; left:30%; top:10%;"></div>
+            <div class="tmap-road-v" style="height:55%; left:60%; top:15%;"></div>
+            <!-- Buildings -->
+            <div class="tmap-building" style="top:11%; left:5%; width:17%; height:22%;"></div>
+            <div class="tmap-building" style="top:11%; left:35%; width:18%; height:20%;"></div>
+            <div class="tmap-building" style="top:71%; left:5%; width:16%; height:20%;"></div>
+            <div class="tmap-building" style="top:71%; left:65%; width:20%; height:20%;"></div>
+            <div class="tmap-building" style="top:11%; left:65%; width:22%; height:20%;"></div>
+            <!-- Route -->
+            <div class="tmap-route" style="width:30%; top:calc(40% - 2px); left:30%;"></div>
+            <!-- Rider -->
+            <div class="tmap-rider" style="top:40%; left:26%;">
+              <i class="fa-solid fa-person-biking"></i>
+            </div>
+            <!-- Pin -->
+            <div class="tmap-pin" style="top:10%; right:20%;">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <!-- Labels -->
+            <div class="tmap-lbl" style="top:73%; left:20%; color: var(--color-primary);">CAFETERIA</div>
+            <div class="tmap-lbl" style="top:2%; right:5%; color: #e74c3c;">YOUR LOCATION</div>
+          </div>
+        </div>
+
+        <!-- Rider Info Card -->
+        <div class="track-card">
+          <div class="track-card-title">
+            <i class="fa-solid fa-user-tie" style="color: var(--color-primary);"></i>
+            Your Delivery Partner
+          </div>
+          <div class="rider-info-header">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80&auto=format&fit=crop&face=center"
+              alt="Rafiq Ahmed" />
+            <div>
+              <p class="rider-name">Rafiq Ahmed</p>
+              <p class="rider-sub">Delivery Runner</p>
+              <div class="rider-rating-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                4.9 &bull; 128 deliveries
+              </div>
+            </div>
+          </div>
+          <div class="rider-info-row">
+            <span class="rider-info-lbl"><i class="fa-solid fa-bicycle" style="margin-right:5px;"></i>Vehicle</span>
+            <span class="rider-info-val">Bicycle</span>
+          </div>
+          <div class="rider-info-row">
+            <span class="rider-info-lbl"><i class="fa-solid fa-hashtag" style="margin-right:5px;"></i>Order ID</span>
+            <span class="rider-info-val">#1042</span>
+          </div>
+          <div class="rider-info-row">
+            <span class="rider-info-lbl"><i class="fa-solid fa-route" style="margin-right:5px;"></i>Distance Left</span>
+            <span class="rider-info-val">0.4 km</span>
+          </div>
+          <div class="rider-info-row">
+            <span class="rider-info-lbl"><i class="fa-solid fa-clock" style="margin-right:5px;"></i>Est. Arrival</span>
+            <span class="rider-info-val" style="color: var(--color-primary);">10-15 min</span>
+          </div>
+          <div class="rider-actions">
+            <a href="chat.html" class="rider-call-btn">
+              <i class="fa-solid fa-comment-dots" style="margin-right:6px;"></i>Chat with Rider
+            </a>
+            <a href="order-history.html" class="rider-chat-btn">
+              <i class="fa-solid fa-list-ul" style="margin-right:6px;"></i>My Orders
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /right col -->
+
+    </div><!-- /layout -->
+  </div>
+
+</body>
+
+</html>
