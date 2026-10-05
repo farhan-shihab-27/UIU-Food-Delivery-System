@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Food Portal — Shop Orders</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" />
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">UIU Food Portal</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="shop-dashboard.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Dashboard
+        </a>
+        <a href="shop-orders.html" class="sidebar-nav-item active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+          </svg>
+          Orders
+        </a>
+        <a href="shop-menu.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          Menu
+        </a>
+        <a href="shop-reports.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23" />
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+          Sales
+        </a>
+        <a href="sales-history.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+          </svg>
+          Reports</a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Profile
+        </a>
+      </nav>
+      <div class="sidebar-user">
+        <img
+          src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&q=80&auto=format&fit=crop&face=center"
+          alt="Chef Rahman" class="sidebar-user-avatar" />
+        <div class="sidebar-user-info">
+          <p class="sidebar-user-name">Chef Rahman</p>
+          <p class="sidebar-user-role">Shop Owner Account</p>
+          <a href="login.html" class="sidebar-logout">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            Log out
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="dash-topbar">
+        <div class="dash-topbar-left">
+          <a href="shop-dashboard.html" class="dash-topbar-back">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            Back
+          </a>
+          <h1 class="dash-topbar-title">Orders</h1>
+        </div>
+      </div>
+
+      <div class="shop-body">
+
+        <!-- Stats -->
+        <div class="dash-stats-row">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:rgba(230,126,34,0.1);color:#e67e22;"><i
+                class="fa-solid fa-bell"></i></div>
+            <p class="dash-stat-label">New Orders</p>
+            <p class="dash-stat-value">8</p>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:rgba(41,128,185,0.1);color:#2980b9;"><i
+                class="fa-solid fa-fire-burner"></i></div>
+            <p class="dash-stat-label">In Progress</p>
+            <p class="dash-stat-value">3</p>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:rgba(142,68,173,0.1);color:#8e44ad;"><i
+                class="fa-solid fa-bag-shopping"></i></div>
+            <p class="dash-stat-label">Ready for Pickup</p>
+            <p class="dash-stat-value">2</p>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:rgba(31,122,62,0.1);color:var(--color-primary);"><i
+                class="fa-solid fa-circle-check"></i></div>
+            <p class="dash-stat-label">Completed Today</p>
+            <p class="dash-stat-value">17</p>
+          </div>
+        </div>
+
+        <!-- Filter Pills -->
+        <div style="display:flex; gap: var(--space-2); margin-bottom: var(--space-5); flex-wrap:wrap;">
+          <a href="shop-orders.html" class="orders-tab-pill active">All Orders</a>
+          <a href="shop-orders-pending.html" class="orders-tab-pill">Pending</a>
+          <a href="shop-orders-preparing.html" class="orders-tab-pill">Preparing</a>
+          <a href="shop-orders-completed.html" class="orders-tab-pill">Completed</a>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="section-card">
+          <div class="section-card-header">
+            <h2 class="section-card-title">All Orders</h2>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Items</th>
+                  <th>Time</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span style="color:var(--color-primary);font-weight:600;">#1045</span></td>
+                  <td>Al-Amin Siam</td>
+                  <td>2x Beef Burger</td>
+                  <td>1:15 PM</td>
+                  <td style="font-weight:600;">$11.50</td>
+                  <!-- JS: acceptOrder(1045)/rejectOrder(1045) update orderStatus1045 -->
+                  <td><span id="orderStatus1045" class="status-badge status-pending">Pending</span></td>
+                  <td style="display:flex; gap:6px;">
+                    <button class="tbl-btn-approve" onclick="acceptOrder(1045)">Accept</button>
+                    <button class="tbl-btn-reject" onclick="rejectOrder(1045)">Reject</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span style="color:var(--color-primary);font-weight:600;">#1044</span></td>
+                  <td>Sarah Kabir</td>
+                  <td>1x Margherita Pizza</td>
+                  <td>1:10 PM</td>
+                  <td style="font-weight:600;">$8.99</td>
+                  <!-- JS: markReady(1044) updates orderStatus1044 -->
+                  <td><span id="orderStatus1044" class="status-badge status-in-progress">Preparing</span></td>
+                  <td><button class="btn btn-primary btn-sm" onclick="markReady(1044)">Ready for Pickup</button></td>
+                </tr>
+                <tr>
+                  <td><span style="color:var(--color-primary);font-weight:600;">#1043</span></td>
+                  <td>Nayeem Islam</td>
+                  <td>3x Chicken Fried Rice</td>
+                  <td>12:55 PM</td>
+                  <td style="font-weight:600;">$15.75</td>
+                  <td><span class="status-badge status-resolved">Ready</span></td>
+                  <td><a href="shop-orders.html" class="tbl-btn-view-outline">Details</a></td>
+                </tr>
+                <tr>
+                  <td><span style="color:var(--color-primary);font-weight:600;">#1042</span></td>
+                  <td>Anika Rahman</td>
+                  <td>1x Hazelnut Frappe</td>
+                  <td>12:30 PM</td>
+                  <td style="font-weight:600;">$3.75</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                  <td><a href="shop-orders.html" class="tbl-btn-view-outline">Details</a></td>
+                </tr>
+                <tr>
+                  <td><span style="color:var(--color-primary);font-weight:600;">#1041</span></td>
+                  <td>Hassan Mia</td>
+                  <td>2x BBQ Wings</td>
+                  <td>12:00 PM</td>
+                  <td style="font-weight:600;">$7.00</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                  <td><a href="shop-orders.html" class="tbl-btn-view-outline">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+      <!-- JS Order Action Log — acceptOrder()/rejectOrder()/markReady() render here -->
+      <div class="shop-body" style="padding-top:0;">
+        <div class="section-card">
+          <div class="section-card-header">
+            <h2 class="section-card-title">Order Action Log</h2>
+          </div>
+          <div id="orderActionLog" style="padding:var(--space-4); min-height:40px; font-size:var(--font-size-sm,0.875rem);"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/uiu-food.js"></script>
+</body>
+
+</html>

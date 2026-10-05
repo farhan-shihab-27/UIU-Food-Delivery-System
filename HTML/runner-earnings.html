@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Runner Portal — Earnings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!--  RUNNER SIDEBAR  -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" />
+          </svg>
+        </div>
+        <span class="sidebar-logo-text">UIU Runner Portal</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="runner-dashboard.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2" />
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+          Available Jobs
+        </a>
+        <a href="runner-deliveries.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>
+          My Deliveries
+        </a>
+        <a href="chat.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Messages
+        </a>
+        <a href="runner-earnings.html" class="sidebar-nav-item active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+          </svg>
+          Earnings
+        </a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Profile
+        </a>
+      </nav>
+
+      <div class="sidebar-user">
+        <img
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop&face=center"
+          alt="Rafiq Ahmed" class="sidebar-user-avatar" />
+        <div class="sidebar-user-info">
+          <p class="sidebar-user-name">Rafiq Ahmed</p>
+          <p class="sidebar-user-role">Runner Account</p>
+          <a href="login.html" class="sidebar-logout">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            Log out
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!--  MAIN CONTENT  -->
+    <main class="main-content">
+
+      <!-- Topbar -->
+      <div class="runner-topbar">
+        <a href="runner-dashboard.html" class="runner-topbar-back">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back
+        </a>
+        <h1 class="runner-topbar-title">Earnings</h1>
+      </div>
+
+      <div style="padding: var(--space-6) var(--space-8);">
+
+        <!-- Hero Earnings Card -->
+        <div class="earnings-hero-card">
+          <p class="earnings-total-label">
+            <i class="fa-solid fa-calendar" style="margin-right:6px; opacity:0.8;"></i>
+            Total Earnings This Month
+          </p>
+          <p class="earnings-total-val">$312.50</p>
+          <p class="earnings-period">September 2026 &bull; 42 deliveries completed</p>
+          <div
+            style="display:flex; gap:var(--space-6); margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.2);">
+            <div>
+              <p style="font-size:var(--font-size-xs); opacity:0.75;">Available Balance</p>
+              <p style="font-size: 1.3rem; font-weight:800;">$87.00</p>
+            </div>
+            <div>
+              <p style="font-size:var(--font-size-xs); opacity:0.75;">Pending</p>
+              <p style="font-size: 1.3rem; font-weight:800;">$45.50</p>
+            </div>
+            <div>
+              <p style="font-size:var(--font-size-xs); opacity:0.75;">Withdrawn</p>
+              <p style="font-size: 1.3rem; font-weight:800;">$180.00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breakdown Cards -->
+        <div class="earnings-breakdown-grid">
+          <div class="earnings-breakdown-card">
+            <p class="earnings-bd-label">
+              <i class="fa-solid fa-sun" style="color:#f5a623; margin-right:4px;"></i>Today
+            </p>
+            <p class="earnings-bd-val">$45.50</p>
+            <p style="font-size:var(--font-size-xs); color:var(--color-text-muted); margin-top:4px;">8 deliveries</p>
+          </div>
+          <div class="earnings-breakdown-card">
+            <p class="earnings-bd-label">
+              <i class="fa-solid fa-calendar-week" style="color:#2980b9; margin-right:4px;"></i>This Week
+            </p>
+            <p class="earnings-bd-val">$128.75</p>
+            <p style="font-size:var(--font-size-xs); color:var(--color-text-muted); margin-top:4px;">28 deliveries</p>
+          </div>
+          <div class="earnings-breakdown-card">
+            <p class="earnings-bd-label">
+              <i class="fa-solid fa-clock" style="color:#8e44ad; margin-right:4px;"></i>Pending Payout
+            </p>
+            <p class="earnings-bd-val">$87.00</p>
+            <p style="font-size:var(--font-size-xs); color:var(--color-text-muted); margin-top:4px;">Processing</p>
+          </div>
+        </div>
+
+        <!-- Earnings History Table -->
+        <div class="section-card" style="margin-bottom: var(--space-5);">
+          <div class="section-card-header">
+            <h2 class="section-card-title">Recent Payouts</h2>
+            <span style="font-size:var(--font-size-xs); color:var(--color-text-muted);">September 2026</span>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Deliveries</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sep 1, 2026</td>
+                  <td>8</td>
+                  <td style="font-weight:700; color:var(--color-primary);">$45.50</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 31, 2026</td>
+                  <td>7</td>
+                  <td style="font-weight:700; color:var(--color-primary);">$38.25</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 30, 2026</td>
+                  <td>9</td>
+                  <td style="font-weight:700; color:var(--color-primary);">$52.00</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 29, 2026</td>
+                  <td>6</td>
+                  <td style="font-weight:700; color:var(--color-primary);">$33.75</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 28, 2026</td>
+                  <td>5</td>
+                  <td style="font-weight:700; color:var(--color-text-secondary);">$28.50</td>
+                  <td><span class="status-badge status-open">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Payout Request Card -->
+        <div class="payout-card">
+          <div class="payout-balance-row">
+            <div>
+              <p class="payout-balance-label">Available for Withdrawal</p>
+              <p class="payout-balance-val">$87.00</p>
+            </div>
+            <div style="text-align:right;">
+              <p style="font-size:var(--font-size-xs); color:var(--color-text-muted);">Next payout</p>
+              <p style="font-size:var(--font-size-sm); font-weight:700; color:var(--color-text-primary);">Sep 7, 2026
+              </p>
+            </div>
+          </div>
+          <p
+            style="font-size:var(--font-size-sm); color:var(--color-text-muted); margin-bottom:var(--space-4); line-height:1.6;">
+            Withdraw your available earnings directly to your bKash or bank account. Processing takes 1-2 business days.
+          </p>
+          <div style="display:flex; gap:var(--space-3);">
+            <a href="runner-earnings.html" class="btn btn-primary" style="flex:1; text-align:center;">
+              <i class="fa-solid fa-money-bill-transfer" style="margin-right:6px;"></i>Request Payout
+            </a>
+            <a href="runner-deliveries.html" class="btn btn-outline" style="flex:1; text-align:center;">
+              View Deliveries
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /padding wrapper -->
+    </main>
+  </div>
+</body>
+
+</html>
